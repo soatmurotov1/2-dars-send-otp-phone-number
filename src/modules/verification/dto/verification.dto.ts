@@ -1,13 +1,11 @@
-import { IsEnum, IsMobilePhone, IsString } from "class-validator";
-import { EvirificationTypes } from "src/common/types/verification";
-
+import { IsEnum, IsMobilePhone, IsString } from 'class-validator';
+import { EVerificationTypes } from 'src/common/types/verification.types';
 
 export class sendOtpDto {
-    @IsEnum(EvirificationTypes)
-    type: EvirificationTypes
+  @IsEnum(EVerificationTypes)
+  type: EVerificationTypes
 
-    @IsMobilePhone("uz-UZ")
-
-    @IsString()
-    phone: string
+  @IsMobilePhone("uz-UZ")
+  @IsString()
+  phone: string
 }
